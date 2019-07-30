@@ -1,0 +1,24 @@
+Jonathan Wright
+Python 3
+
+
+Total time 1:20 
+(the majority spent trying to learn unit testing)
+Assumptions made:
+	All relevant information relevant to the user is available through this API
+Functional requirements:
+	Check a user input for a valid UK zipcode
+	print country and region for postcode
+	list nearest postcode and their countries/regions
+
+thoughts on improvements:
+	minimize execution time
+	More thorough checking of correct input format
+	With more time i could have learned how to properly use the built in python unit test
+		-using mock to simulate user input etc
+		-i could not get this to work
+	
+	Improvements on API timeout checks as i dont have much experience with this aspect
+
+Unit test:
+	simple edge case test for an empty string

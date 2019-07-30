@@ -1,0 +1,24 @@
+import requests
+import json
+
+#zipchecker edge case test for an empty string returns false
+def zipchecker(zipcode):
+
+    resp = requests.get('http://postcodes.io/postcodes/' + zipcode + '/validate')
+
+    if resp.status_code != 200:
+        raise ApiError('GET /tasks/ {}'.format(resp.status_code))
+    json_data = json.loads(resp.text)
+
+    print(json_data)
+    if json_data['result'] == True:
+        return True
+    else:
+        return False
+
+def main():
+
+    zipcode = " "
+    zipchecker(zipcode)
+
+main()
